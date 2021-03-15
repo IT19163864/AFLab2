@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script type="text/javascript">
+        //Q1
+        // var sayHello = function() {
+        //     console.log('Hello World');
+        // };
+        //
+        // var callHello = function (helloFunc) {
+        //     helloFunc();
+        // }
+        //
+        // callHello(sayHello);
+
+        //Q2
+        // var myObject = {
+        //     name:"Sahan",
+        //     age:20,
+        //     getName : function() {
+        //         return this.name;
+        //     }
+        // };
+
+        //Q3
+        // var vehicleName = "BMW";
+        //
+        // function printVehicleName(){
+        //     console.log(this.vehicleName);
+        // }
+        //
+        // var vehicle = {
+        //     vehicleName : "Toyota",
+        //     getVehicleName : printVehicleName
+        // }
+        //
+        // vehicle.getVehicleName();
+        // printVehicleName();
+        //
+        // var execute = vehicle.getVehicleName();
+        // execute = execute.bind(vehicle);
+        // execute();
+
+        //Q4
+        function taxCalculator(percentage) {
+            return function (amount) {
+                return amount * percentage;
+            }
+        }
+
+        var calculator = taxCalculator(.12);
+        console.log(calculator(200));
+
+    </script>
+</body>
+</html>
